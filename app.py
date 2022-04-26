@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-  
 from flask import Flask,request, render_template
 #from requests import request
 import model as m 
@@ -8,11 +9,13 @@ app = Flask(__name__)
 
 @app.route("/", methods = ["GET","POST"])
 def tags():
+    result = None
     if request.method == "POST":
         article = request.form['article']
-        results = m.predict_tags(article)
-        print(results)
-    return render_template("index.html",results = results)
+        result = m.predict_tags(article)
+        
+        print(result)
+    return render_template("index.html",result=result )
 
 
 

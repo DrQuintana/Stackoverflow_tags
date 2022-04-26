@@ -86,7 +86,7 @@ def predict_tags(article):
     X_tfidf = vectorizer.transform(cleaned_question)
     
     predict = model.predict(X_tfidf)
-    predict_probas = model.predict_proba(X_tfidf)
+    predict_probas = model.predict_proba(X_tfidf)[0]
 
     tags_predict = multibin_model.inverse_transform(predict)
 
@@ -102,7 +102,7 @@ def predict_tags(article):
     results['Predicted_Tags'] = tags_predict
     results['Predicted_Tags_Probabilities'] = df_predict_probas.set_index('Tags')['Probas'].to_dict()
     
-    return df_predict_probas
+    return results
     
 
 
