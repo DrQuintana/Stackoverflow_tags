@@ -8,4 +8,3 @@ scikit-learn
 matplotlib==3.5.0
 beautifulsoup4==4.10.0
 langdetect
-en_core_web_sm
