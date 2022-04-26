@@ -15,6 +15,7 @@ from langdetect import detect
 import nltk
 from nltk.corpus import stopwords
 import spacy
+
 def remove_pos(nlp, x, pos_list):
 
     # Test of language detection
