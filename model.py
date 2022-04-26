@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import re
 from bs4 import BeautifulSoup
-from langdetect import detect
+#from langdetect import detect
 #from deep_translator import GoogleTranslator
 import nltk
 from nltk.corpus import stopwords
@@ -19,7 +19,7 @@ import spacy
 def remove_pos(nlp, x, pos_list):
 
     # Test of language detection
-    lang = detect(x)
+    #lang = detect(x)
     #if(lang != "en"):
         # Deep translate if not in English
      #   x = GoogleTranslator(source='auto', target='en').translate(x)
