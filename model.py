@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pickle
 import nltk
 import spacy
-#import en_core_web_sm
+import en_core_web_sm
 import re
 from bs4 import BeautifulSoup
 #from langdetect import detect
