@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pickle
 import nltk
 import spacy
-import en_core_web_sm
+
 import re
 from bs4 import BeautifulSoup
 #from langdetect import detect
@@ -82,7 +82,7 @@ def predict_tags(article):
     except: # If not present, we download
         spacy.cli.download("en_core_web_md")
         nlp = spacy.load("en_core_web_md")
-        
+
     pos_list = ["NOUN","PROPN"]
     rawtext = article
     cleaned_question =text_cleaner(rawtext, nlp, pos_list, "english")
