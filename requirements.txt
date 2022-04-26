@@ -6,3 +6,4 @@ Flask==2.1.0
 gunicorn==20.1.0
 scikit-learn
 matplotlib==1.5.3
+Werkzeug
