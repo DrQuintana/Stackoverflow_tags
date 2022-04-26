@@ -5,16 +5,13 @@ import pickle
 import nltk
 import spacy
 #import en_core_web_sm
-
-import numpy as np
-import pandas as pd
 import re
 from bs4 import BeautifulSoup
 #from langdetect import detect
 #from deep_translator import GoogleTranslator
 import nltk
 from nltk.corpus import stopwords
-import spacy
+
 
 def remove_pos(nlp, x, pos_list):
 
