@@ -88,10 +88,18 @@ def predict_tags(article):
     cleaned_question =text_cleaner(rawtext, nlp, pos_list, "english")
     #vektorize
     print(cleaned_question)
-    X_tfidf = vectorizer.transform(cleaned_question)
+
+    def transform_stc(my_text) :
+    
+        transf_desc_text = ' '.join(my_text)
+        return transf_desc_text
+
+    X =  [transform_stc(cleaned_question)]
+
+    X_tfidf = vectorizer.transform(X)
     
     predict = model.predict(X_tfidf)
-    predict_probas = model.predict_proba(X_tfidf)[0]
+    predict_probas = model.predict_proba(X_tfidf)
 
     tags_predict = multibin_model.inverse_transform(predict)
 
